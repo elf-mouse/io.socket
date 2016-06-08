@@ -31,4 +31,7 @@ io.to('some room').emit('some event'):
 
 // leave to unsubscribe the socket to a given channel (server-side)
 socket.leave('some room');
+
+// sending to individual socketid
+io.sockets.connected[socketid].emit('private message');
 ```
